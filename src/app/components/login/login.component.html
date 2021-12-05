@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="example-container">
+    <p><b>LOGIN</b></p>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <p><button>GO</button></p>
+    <p><b>Don't Have an account <span class="signup" routerLink="/signup"> Sign-Up</span> </b></p>
+  </div>
+</div>
+
+
